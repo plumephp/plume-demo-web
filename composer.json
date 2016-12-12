@@ -1,0 +1,13 @@
+{
+    "require": {
+        "plumephp/plume": "^1.0"
+    },
+    "autoload": {
+            "psr-4": {
+                "": "modules/"
+            }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.5.7"
+    }
+}

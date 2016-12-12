@@ -1,0 +1,66 @@
+<!--html head部分  通过引入文件完成(分别适应于PC和手机)-->
+<?php include($plume['ROOT_PATH'] . "modules/Example/View/layout/layoutM.phtml"); ?>
+<?php
+$userInfo = null;
+if (isset($data['user_info'])) {
+    $userInfo = $data['user_info'];
+}
+$userError = null;
+if (isset($data['user_error'])) {
+    $userError = $data['user_error'];
+}
+?>
+<!--html body部分 根据业务需求完善你的content-->
+
+
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-md-offset-4">
+<h4>编辑页面</h4>
+<hr>
+<form class="form-horizontal">
+<div class="form-group">
+  <div class="row">
+    <div class="col-md-3">
+      <label class="control-label" for="username">用户名：</label>
+    </div>
+    <div class="col-md-9">
+      <input class="form-control" type="text" id="username" placeholder="输入您的登录名称" value="<?php echo isset($userInfo['username']) ? $userInfo['username'] : '' ?>">
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <div class="row">
+    <div class="col-md-3">
+      <label class="control-label" for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+    </div>
+    <div class="col-md-9">
+      <input class="form-control" type="text" id="password" placeholder="输入您的登录密码" value="<?php echo isset($userInfo['password']) ? $userInfo['password'] : '' ?>">
+    </div>
+  <div>
+</div>
+<div class="form-group">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+      <button type="button" id="save" class="btn btn-default">保存</button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" id="reset" class="btn btn-default">重填</button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" id="cancel" class="btn btn-default">取消</button>
+    </div>
+  </div>
+</div>
+    <input type="hidden" id="userid" value="<?php echo isset($userInfo['id']) ? $userInfo['id'] : '' ?>">
+</form><!--end form-->
+</div><!--end col-->
+</div><!--end row-->
+</div><!--end container-->
+
+
+<!--html body部分 结束-->
+
+<!--html foot部分  通过引入文件完成-->
+<?php include($plume['ROOT_PATH'] . "modules/Example/View/layout/footer.phtml"); ?>
+<script src="/js/userinfo.js"></script>
