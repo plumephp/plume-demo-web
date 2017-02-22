@@ -161,9 +161,13 @@ class IndexController extends Controller{
         return $this->msg(200,$this->provider('session')->getSessionValue('plume.TestSession'))->response();
     }
 
+    public function exceptionAction(){
+        return $this->result('redirect to exception view')->view_exception('exception')->response();
+    }
+
     public function redisAction(){
         $this->api();
-        $redisCon = $this->provider('redis')->connect();
+        $redisCon = $this->provider('redis')->connect_slave();
         $key = 'plume.TestRedis';
         if($redisCon->get($key)){
             $redisCon->set($key,'正');

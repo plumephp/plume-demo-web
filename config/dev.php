@@ -15,5 +15,10 @@ return array(
         'host' => '127.0.0.1',
         'port' => '6379'
     ),
+    'redis_slave' => array(
+        'host' => '127.0.0.1',
+        'port' => '6379'
+    ),
+
 
 );
