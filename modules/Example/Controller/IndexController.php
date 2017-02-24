@@ -167,7 +167,8 @@ class IndexController extends Controller{
 
     public function redisAction(){
         $this->api();
-        $redisCon = $this->provider('redis')->connect_slave();
+        $redisCon = $this->provider('redis')->connect();
+        // $redisCon = $this->provider('redis')->connect_slave();
         $key = 'plume.TestRedis';
         if($redisCon->get($key)){
             $redisCon->set($key,'正');
