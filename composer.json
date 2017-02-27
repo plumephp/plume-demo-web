@@ -1,10 +1,10 @@
 {
     "require": {
+        "plumephp/plume": "dev-master"
     },
     "autoload": {
             "psr-4": {
-                "": "modules/",
-                "Plume\\": "/Users/zhangtao/Documents/plumephp2016/plume/src/Plume"
+                "": "modules/"
             }
     },
     "require-dev": {
