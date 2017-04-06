@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/plumephp/plume.git",
-                "reference": "aff1d8d3701fb725fe1db8635621224e75f0aa58"
+                "reference": "1ecd7fbb3599f5bd22d690149a9418c5e563d57f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/plumephp/plume/aff1d8d3701fb725fe1db8635621224e75f0aa58.zip",
-                "reference": "aff1d8d3701fb725fe1db8635621224e75f0aa58",
+                "url": "https://files.phpcomposer.com/files/plumephp/plume/1ecd7fbb3599f5bd22d690149a9418c5e563d57f.zip",
+                "reference": "1ecd7fbb3599f5bd22d690149a9418c5e563d57f",
                 "shasum": ""
             },
             "require": {
@@ -83,7 +83,7 @@
                 "BSD-2-Clause"
             ],
             "description": "A micro framework for PHP.",
-            "time": "2017-04-06 07:31:34"
+            "time": "2017-04-06 09:50:33"
         }
     ],
     "packages-dev": [
