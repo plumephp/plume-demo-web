@@ -2,3 +2,4 @@
 vendor
 logs
 cache
+.ac-php-conf.json
