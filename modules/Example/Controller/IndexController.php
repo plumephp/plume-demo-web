@@ -183,6 +183,12 @@ class IndexController extends Controller{
         return $this->msg(200,$data)->response();
     }
 
+    public function asynclogAction(){
+        $this->api();
+        $this->log('test-asynclog','test data');
+        return $this->msg(200,'asynclog')->response();
+    }
+
     public function pageAction(){
         $this->api();
         $total = $this->service->fetchCount();
