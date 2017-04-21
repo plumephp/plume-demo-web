@@ -11,6 +11,7 @@ use Plume\Application;
 $app = new Application();
 $app['plume.root.path'] = __DIR__.'/../';// 指定根路径
 $app['plume.module.default']='example';// 指定默认模块
+$app['plume.module.prefix']='example';// 指定URL路径默认模块名,http://localhost/index/index
 // $app['plume.cache.expire']=200;// 设置缓存过期时间
 // $app['plume.cache.request']=true;// 开启请求缓存
 // $app['plume.cache.db']=true;// 开启数据库缓存
@@ -21,6 +22,11 @@ $app['plume.module.default']='example';// 指定默认模块
 // );
 // $app['plume.log.debug']=true;// 开启debug日志
 // $app['plume.log.time']=true;// 开启性能日志
+$app['plume.log.time.config']=array(
+    'ip_local' => '127.0.0.1',
+    'project' => 'PlumeDemoWeb',
+    'server' => array('127.0.0.1' => 4730)
+);
 // $app['plume.templates.300']= 'templates/index.html';// 定制默认模板页面
 // $app['plume.templates.404']= 'templates/404.html';
 // $app['plume.templates.500']= 'templates/500.html';
