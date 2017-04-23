@@ -11,7 +11,7 @@ use Plume\Application;
 $app = new Application();
 $app['plume.root.path'] = __DIR__.'/../';// 指定根路径
 $app['plume.module.default']='example';// 指定默认模块
-$app['plume.module.prefix']='example';// 指定URL路径默认模块名,http://localhost/index/index
+//$app['plume.module.prefix']='example';// 指定URL路径默认模块名,http://localhost/index/index
 // $app['plume.cache.expire']=200;// 设置缓存过期时间
 // $app['plume.cache.request']=true;// 开启请求缓存
 // $app['plume.cache.db']=true;// 开启数据库缓存
