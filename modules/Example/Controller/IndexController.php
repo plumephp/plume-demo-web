@@ -7,6 +7,7 @@ use Plume\Core\Controller;
 use Plume\Core\Service;
 use Plume\Core\Dao;
 use Example\Dao\UserInfoDao;
+use Plume\Util\HttpUtils;
 
 class IndexController extends Controller{
 
@@ -183,6 +184,12 @@ class IndexController extends Controller{
         return $this->msg(200,$data)->response();
     }
 
+    public function asynclogAction(){
+        $this->api();
+        $this->log('test-asynclog','test data');
+        return $this->msg(200,'asynclog')->response();
+    }
+
     public function pageAction(){
         $this->api();
         $total = $this->service->fetchCount();
@@ -191,5 +198,11 @@ class IndexController extends Controller{
         $userList = $this->service->fetchAll();
         $page = array('total' => $total, 'index' => $config['index'], 'size' => $config['size']);
         return $this->result($userList)->json()->response();
+    }
+
+    public function curlAction(){
+        $this->api();
+        $rtn = HttpUtils::http_get("http://www.baidu.com", 1);
+        return $this->result($rtn)->json()->response();
     }
 }

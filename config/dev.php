@@ -19,6 +19,10 @@ return array(
         'host' => '127.0.0.1',
         'port' => '6379'
     ),
+    'log' => array(
+        'project_name' => 'plume-demo-web',
+        'server' => array('127.0.0.1' => 4730)
+    ),
 
 
 );
