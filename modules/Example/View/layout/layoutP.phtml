@@ -6,5 +6,55 @@
         <?php echo isset($data['title']) ? $data['title'] : "Example by Plume";?>
     </title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/common/style-p.css" type="text/css" />
+    <script src="/js/common/jquery.min.js"></script>
+    <script src="/js/common/base.js"></script>
 </head>
 <body>
+
+<!--alert通知类弹窗-->
+<div class="alert-box">
+    <div class="alert-bg"></div>
+    <div class="alert-cont">
+        <i class="iconfont closeIcon"></i>
+        <div class="alert-info">年会大师升级了！请到"设置-检查更新"中查看更新</div>
+        <div class="alert-btn">
+            <button class="alert-sure">我知道了</button>
+        </div>
+    </div>
+</div>
+<!--confirm-->
+<div class="confirm-box">
+    <div class="confirm-bg"></div>
+    <div class="confirm-cont">
+        <i class="iconfont closeIcon"></i>
+        <div class="confirm-info">
+            <span class="info-cont"></span>
+        </div>
+        <div class="confirm-btn">
+            <button class="confirm-sure">确认</button>
+            <button class="confirm-cancel">取消</button>
+        </div>
+    </div>
+</div>
+<!--操作成功类似窗口-->
+<div class="tip-box">
+    <div class="tip-bg"></div>
+    <div class="tip-cont">
+        <div class="tip-info"></div>
+    </div>
+</div>
+<!--加载窗口-->
+<div class="load-box">
+    <div class="load-bg"></div>
+    <div class="load-cont">
+        <div class="load-info">
+            <span>正在XXX中，请稍等</span>
+            <div class="load-dot">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,203 @@
+.px2rem(@name, @px){
+    @{name}: @px / 75 * 1rem;
+}
+*{
+  padding:0;
+  margin:0;
+  list-style: none;
+  .px2rem(font-size,28);
+}
+html,body{
+  width:100%;
+  height:100%;
+}
+.container{
+  width:100%;
+  height:100%;
+}
+/*iconfont*/
+@font-face {
+  font-family: 'iconfont';  /* project id 145487 */
+  src: url('http://at.alicdn.com/t/font_145487_rhopz148iexhto6r.eot');
+  src: url('http://at.alicdn.com/t/font_145487_rhopz148iexhto6r.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_145487_rhopz148iexhto6r.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_145487_rhopz148iexhto6r.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_145487_rhopz148iexhto6r.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  .px2rem(font-size,32);
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon {
+  .px2rem(font-size,48);
+  .px2rem(margin-top,20);
+  .px2rem(margin-top,20);
+  .px2rem(margin-bottom,20);
+  color: #333;
+}
+/*alert*/
+.alert-box,.tip-box,.confirm-box,.load-box{
+  display: none;
+}
+.alert-bg,.confirm-bg,.tip-bg,.load-bg{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  -moz-opacity: .5;
+  opacity: 0.5;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+.alert-cont,.confirm-cont,.load-cont{
+  background: #fff;
+  .px2rem(width,480);
+  .px2rem(padding,40);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  .px2rem(margin-top,-162);
+  .px2rem(margin-left,-280);
+  z-index: 1001;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow:0px 0px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.alert-info,.confirm-info{
+  .px2rem(height,160);
+  .px2rem(line-height,48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.alert-btn,.confirm-btn{
+  .px2rem(margin-top,20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alert-sure,.confirm-sure,.confirm-cancel{
+  outline: none;
+  background: #ff4343;
+  border: 1px solid #ff4343;
+  .px2rem(width,180);
+  .px2rem(height,60);
+  .px2rem(border-radius,8);
+  color: #fff;
+  .px2rem(margin-left,20);
+  .px2rem(margin-right,20);
+  cursor: pointer;
+}
+.confirm-btn .confirm-cancel{
+  background: #efefef;
+  border: 1px solid #ddd;
+  color: #666;
+}
+/*tip*/
+.tip-bg{
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.tip-cont{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  .px2rem(width,320);
+  .px2rem(padding-left,60);
+  .px2rem(padding-right,60);
+  .px2rem(margin-top,-50);
+  .px2rem(margin-left,-220);
+  .px2rem(border-radius,8);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow:0px 0px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10100;
+  text-align: center;
+}
+.tip-info{
+  color: #333;
+  .px2rem(height,100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.confirm-icon{
+  .px2rem(font-size,62);
+  .px2rem(width,62);
+  .px2rem(height,62);
+  .px2rem(line-height,62);
+  vertical-align: middle;
+  .px2rem(margin-top,20);
+  display: inline-block;
+}
+.info-cont{
+  display: block;
+  .px2rem(padding-top,20);
+}
+/*load*/
+.load-info{
+  .px2rem(padding-top,60);
+  .px2rem(padding-bottom,60);
+  .px2rem(height,120);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap
+}
+.load-info span,.load-dot{
+  display: block;
+  width:100%;
+}
+.load-dot i{
+  .px2rem(height,20);
+  .px2rem(width,20);
+  display: inline-flex;
+  background: #ff5c54;
+  animation: spin linear 1s infinite;
+  -webkit-animation: spin linear 1s infinite;
+}
+.load-dot i:first-child {
+  animation-delay:0s;
+}
+.load-dot i:nth-child(2) {
+  animation-delay:0.4s;
+}
+.load-dot i:last-child {
+  animation-delay:0.8s;
+}
+/*定义动画*/
+@-webkit-keyframes spin { /*兼容性写法 spin是关键帧的动画名称*/
+  0%,60%,100% {
+    .px2rem(height,20);
+    .px2rem(width,20);
+  }
+  30% {
+    .px2rem(height,24);
+    .px2rem(width,24);
+  }
+}
+@keyframes spin {
+  0%,60%,100% {
+    .px2rem(height,20);
+    .px2rem(width,20);
+  }
+  30% {
+    .px2rem(height,24);
+    .px2rem(width,24);
+  }
+}
+
