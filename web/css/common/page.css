@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#pages {
+    text-align: center;
+    margin-top: 25px;
+}
+
+#pages span {
+    margin-right: 8px;
+}
+
+#pages .pageInfo {
+    margin-left: 20px;
+}
+
+#pages a {
+    margin-right: 8px;
+    height: 26px;
+    width: 26px;
+    text-align: center;
+    border: 1px solid #ddd;
+    line-height: 26px;
+    display: inline-block;
+    cursor: pointer;
+    color: #333;
+}
+
+#pages .first, #pages .last {
+    width: 40px;
+}
+
+#pages input {
+    width: 40px;
+    height: 26px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #ff4343;
+    margin-right: 8px;
+}
+
+#pages input:focus {
+    outline: none;
+    border-color: #ff4343;
+}
+
+#pages a.curPage, #pages a:hover {
+    color: #fff;
+    background-color: #ff4343;
+    border-color: #ff4343;
+}
+
+#pages a.disabled, #pages a.disabled:hover {
+    color: #ccc;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #ddd;
+}
