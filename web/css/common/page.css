@@ -31,29 +31,27 @@
     color: #333;
 }
 
-#pages .first, #pages .last {
-    width: 40px;
-}
-
 #pages input {
     width: 40px;
     height: 26px;
     text-align: center;
     border: 1px solid #ddd;
     font-size: 14px;
-    color: #ff4343;
+    color: #333;
     margin-right: 8px;
-}
-
-#pages input:focus {
     outline: none;
-    border-color: #ff4343;
 }
 
-#pages a.curPage, #pages a:hover {
+#pages a.curPage, #pages a.curPage:hover {
     color: #fff;
     background-color: #ff4343;
     border-color: #ff4343;
+}
+
+#pages a:hover {
+    color: #333;
+    background-color: #f1f1f1;
+    border-color: #ddd;
 }
 
 #pages a.disabled, #pages a.disabled:hover {
