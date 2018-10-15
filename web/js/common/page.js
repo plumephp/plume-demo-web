@@ -7,7 +7,7 @@
 function page(totalNum, pageSize, pageBox) {
 	var container = $(pageBox);//分页盒子
 	var curPage = parseInt(getQueryString('page') || 1);//当前页
-	var totalPage = parseInt(totalNum / pageSize);//总共多少页
+	var totalPage = Math.ceil(totalNum / pageSize);//总共多少页
 	var i;
 	var pageHtml = '';
 	//当总的页数大于等于1时候显示
