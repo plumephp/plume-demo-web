@@ -136,9 +136,21 @@ function page(totalNum, pageSize, pageBox) {
 
 	//获取当前页面,改变分页点击时所跳转的页面
 	function repUrl(rel) {
-		var oldUrl = window.location.href;
-		var arr = oldUrl.split("?");//存储当前地址
-		window.location.href = arr[0] + '?page=' + rel;//拼接地址
+		var url = window.location.href;
+		if (url.indexOf("?") > 0) {
+			if (url.indexOf("?page") > 0) {
+				url = url.substr(0, url.indexOf("?page")) + "?page=";
+			} else {
+				if (url.indexOf("&page") > 0) {
+					url = url.substr(0, url.indexOf("&page")) + "&page=";
+				} else {
+					url = url + "&page=";
+				}
+			}
+		} else {
+			url = url + "?page=";
+		}
+		window.location.href = url + rel;//拼接地址
 	}
 
 	//获取页面参数的值
