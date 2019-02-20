@@ -57,19 +57,21 @@ if ($plume['error']) {
                 ?>
         </table>
     </div>
-    <div class="panel-heading text-center">
-        <nav>
-            <ul class="pagination">
-                <li class="disabled"><a href="#">&laquo;</a></li>
-                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
-        </nav>
-    </div>
+<!--    <div class="panel-heading text-center">-->
+<!--        <nav>-->
+<!--            <ul class="pagination">-->
+<!--                <li class="disabled"><a href="#">&laquo;</a></li>-->
+<!--                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>-->
+<!--                <li><a href="#">2</a></li>-->
+<!--                <li><a href="#">3</a></li>-->
+<!--                <li><a href="#">4</a></li>-->
+<!--                <li><a href="#">5</a></li>-->
+<!--                <li><a href="#">&raquo;</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </div>-->
+    <!--分页盒子-->
+    <div id="pages"></div>
 </div><!--end panel-->
 </div><!--end col-->
 </div><!--end row-->
@@ -79,3 +81,6 @@ if ($plume['error']) {
 <!--html foot部分  通过引入文件完成-->
 <?php include($plume['ROOT_PATH'] . "modules/Example/View/layout/footer.phtml"); ?>
 <script src="/js/userinfo.js"></script>
+<script type="text/javascript">
+    page(200, 10, '#pages');
+</script>

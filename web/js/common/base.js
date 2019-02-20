@@ -319,8 +319,8 @@ BaseFun = {
             $('.confirm-icon').remove();//移除图标
         });
         $('.confirm-cancel').unbind('click').click(function () {
-            if (concelFun){
-                concelFun();
+            if (cancelFun){
+                cancelFun();
             }
             $(".confirm-box").hide();
             $('.confirm-icon').remove();//移除图标
