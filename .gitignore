@@ -1,7 +1,11 @@
 .DS_Store
-vendor
-logs
-cache
-.ac-php-conf.json
-composer.lock
 .idea
+bin/local.sh
+config/config.php
+var/cache/*
+!var/cache/readme.md
+var/logs/*
+!/var/logs/readme.md
+vendor
+web/index.php
+composer.lock
