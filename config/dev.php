@@ -23,6 +23,13 @@ return array(
         'project_name' => 'plume-demo-web',
         'server' => array('127.0.0.1' => 4730)
     ),
-
+    'plume_access' => array(
+        'project_name' => 'plume_demo_web',
+        'redis' => array(
+            'host' => '127.0.0.1',
+            'port' => '6379',
+            'database' => '0'
+        )
+    ),
 
 );
